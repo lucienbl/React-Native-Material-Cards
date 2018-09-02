@@ -30,7 +30,7 @@ export default class CardTitle extends Component {
       return (
         <View style={[styles.cardTitle, newStyle]}>
           {this.props.avatarSource!==undefined &&
-            <Image source={this.props.avatarSource} resizeMode="stretch" style={styles.avatarStyle} />
+            <Image source={this.props.avatarSource} resizeMode="contain" style={styles.avatarStyle} />
           }
           <View style={styles.cardTitleTextCont}>
             {this.props.title!==undefined &&
@@ -47,7 +47,7 @@ export default class CardTitle extends Component {
       return (
         <View style={[styles.cardTitle, newStyle]}>
           {this.props.avatarSource!==undefined &&
-            <Image source={this.props.avatarSource} resizeMode="stretch" style={styles.avatarStyle} />
+            <Image source={this.props.avatarSource} resizeMode="contain" style={styles.avatarStyle} />
           }
           <View style={styles.cardTitleTextCont}>
             {this.props.subtitle!==undefined &&
@@ -91,9 +91,7 @@ const styles = StyleSheet.create({
     color: 'rgba(0 ,0 ,0 , 0.38)'
   },
   avatarStyle: {
-    width: 40,
     height: 40,
-    borderRadius: 20,
     marginRight: 16
   }
 });
